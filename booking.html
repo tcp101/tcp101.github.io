@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now - In Home Companions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">In Home Companions</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="booking.html">Book Now</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Book Your Session</h2>
+                    <form id="booking-form">
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Select Date and Time</label>
+                            <input type="text" class="form-control" id="date" placeholder="Click to select date and time" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="service" class="form-label">Service Type</label>
+                            <select class="form-control" id="service" required>
+                                <option value="">Select Service</option>
+                                <option value="companionship">Companionship Visit</option>
+                                <option value="chores">Household Chores</option>
+                                <option value="tech">Technology Support</option>
+                                <option value="personal">Personal Care</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="duration" class="form-label">Duration</label>
+                            <select class="form-control" id="duration" required>
+                                <option value="">Select Duration</option>
+                                <option value="1">1 hour - $50</option>
+                                <option value="2">2 hours - $90</option>
+                                <option value="4">4 hours - $160</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Address</label>
+                            <textarea class="form-control" id="address" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label>Payment Option</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="payment" id="payNow" value="now" checked>
+                                <label class="form-check-label" for="payNow">
+                                    Pay Now
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="payment" id="payLater" value="later">
+                                <label class="form-check-label" for="payLater">
+                                    Pay Later
+                                </label>
+                            </div>
+                        </div>
+                        <div id="card-element" class="mb-3">
+                            <!-- Stripe Card Element will be inserted here -->
+                        </div>
+                        <div id="card-errors" role="alert"></div>
+                        <button type="submit" class="btn btn-primary" id="submit-btn">Book and Pay</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/038/962/461/small/ai-generated-caucasian-successful-confident-young-businesswoman-ceo-boss-bank-employee-worker-manager-with-arms-crossed-in-formal-wear-isolated-in-white-background-photo.jpg" alt="Booking calendar" class="rounded" style="width: 600px; height: 500px;">
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2023 In Home Companions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="booking.js"></script>
+</body>
+</html>
