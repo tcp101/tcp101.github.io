@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style>
+    /* Hide Square's auto-injected header (all versions) */
+    .sqs-header,
+    .sqs-header__business-name,
+    .sqs-header__container,
+    .sqs-booking-header,
+    .sqs-booking-header__container,
+    .sqs-booking-header__business-name,
+    header.sqs-header,
+    header.sqs-booking-header {
+        display: none !important;
+        height: 0 !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Now - In Home Companions</title>
@@ -11,8 +27,14 @@
     <!-- Your Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
+    <!-- Back to Home link -->
+    <p style="text-align:center; margin: 15px 0;">
+        <a href="https://in-home-companions.com/" style="font-size: 1.3rem; font-weight: 700;">
+            ← Back to Home
+        </a>
+    </p>
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
         <div class="container">
