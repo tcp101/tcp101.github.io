@@ -19,3 +19,22 @@ footer {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+
+/* --------------------------------------------- */
+/* MOBILE ONLY — center logo above the heading   */
+/* --------------------------------------------- */
+@media (max-width: 768px) {
+
+    /* Center the column that contains the logo */
+    header .col-md-2 {
+        text-align: center !important;
+        margin-bottom: 20px;
+    }
+
+    /* Reset the inline negative margin and adjust size */
+    header .col-md-2 img {
+        margin-left: 0 !important;
+        width: 160px;
+        height: 160px;
+    }
+}
