@@ -21,17 +21,22 @@ footer {
 }
 
 /* --------------------------------------------- */
-/* MOBILE ONLY — center logo above the heading   */
+/* MOBILE ONLY — move logo BELOW the heading     */
 /* --------------------------------------------- */
 @media (max-width: 768px) {
 
-    /* Center the column that contains the logo */
+    /* Change the order of the columns on mobile */
     header .col-md-2 {
+        order: 2; /* logo goes second */
         text-align: center !important;
-        margin-bottom: 20px;
+        margin-top: 20px;
     }
 
-    /* Reset the inline negative margin and adjust size */
+    header .col-md-6 {
+        order: 1; /* heading goes first */
+    }
+
+    /* Reset negative margin + adjust size */
     header .col-md-2 img {
         margin-left: 0 !important;
         width: 160px;
