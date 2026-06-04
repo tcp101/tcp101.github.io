@@ -27,7 +27,7 @@ footer {
 
     /* Change the order of the columns on mobile */
     header .col-md-2 {
-        order: 2; /* logo goes second */
+        order: -1; /* logo goes second */
         text-align: center !important;
         margin-top: 20px;
     }
