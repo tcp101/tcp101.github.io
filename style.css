@@ -25,21 +25,19 @@ footer {
 /* --------------------------------------------- */
 @media (max-width: 768px) {
 
-    /* Change the order of the columns on mobile */
+    /* Move the logo ABOVE the hero text */
     header .col-md-2 {
-        order: -1; /* logo goes second */
+        order: -1; /* logo goes first */
         text-align: center !important;
         margin-top: 20px;
+        width: 100%;
     }
 
-    header .col-md-6 {
-        order: 1; /* heading goes first */
-    }
-
-    /* Reset negative margin + adjust size */
+    /* Reset negative margin + adjust size on mobile */
     header .col-md-2 img {
         margin-left: 0 !important;
         width: 160px;
         height: 160px;
     }
 }
+
