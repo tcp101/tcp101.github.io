@@ -1,9 +1,16 @@
+
 .hero {
     background-color: #D2B48C !important;
 }
+
+.hero.bg-primary {
+    background: #D2B48C !important;
+}
+
 body {
     font-family: Arial, sans-serif;
 }
+
 
 .navbar-brand {
     font-weight: bold;
