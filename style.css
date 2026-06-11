@@ -1,17 +1,76 @@
 /* ------------------------------------------------------ */
-/* GLOBAL LAYOUT (safe additions, no overrides)           */
+/* YOUR ORIGINAL WORKING STYLES (kept exactly as-is)      */
 /* ------------------------------------------------------ */
 
+.hero {
+    background-color: #D8C3A5 !important;
+}
+
+.hero.bg-primary {
+    background: #D8C3A5 !important;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+footer {
+    margin-top: auto;
+}
+
+#card-element {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* MOBILE ONLY — move logo BELOW the heading */
+@media (max-width: 768px) {
+    header .col-md-2 {
+        order: -1;
+        text-align: center !important;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    header .col-md-2 img {
+        margin-left: 0 !important;
+        width: 160px;
+        height: 160px;
+    }
+}
+
+/* ------------------------------------------------------ */
+/* GLOBAL COLOR PALETTE (safe additions)                  */
+/* ------------------------------------------------------ */
+:root {
+    --primary: #0077cc;
+    --primary-dark: #0056a3;
+    --accent: #D8C3A5;
+    --light-bg: #f8f9fa;
+    --text-dark: #333;
+}
+
+/* ------------------------------------------------------ */
+/* GLOBAL LAYOUT + CONTAINER                              */
+/* ------------------------------------------------------ */
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Header + Navigation (adds missing styles, does NOT override yours) */
+/* ------------------------------------------------------ */
+/* HEADER + NAVIGATION (adds missing styles)              */
+/* ------------------------------------------------------ */
 header {
     background: white;
     border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .navbar {
@@ -25,7 +84,7 @@ header {
     font-size: 1.4rem;
     font-weight: bold;
     text-decoration: none;
-    color: #333;
+    color: var(--text-dark);
 }
 
 .nav-links {
@@ -38,19 +97,18 @@ header {
 
 .nav-links li a {
     text-decoration: none;
-    color: #333;
+    color: var(--text-dark);
     font-weight: 500;
 }
 
 .nav-links li a.active {
-    color: #0077cc;
+    color: var(--primary);
     font-weight: 600;
 }
 
 /* ------------------------------------------------------ */
-/* HERO SECTION (adds missing structure, keeps your color) */
+/* HERO SECTION (structure only — your colors preserved)  */
 /* ------------------------------------------------------ */
-
 .hero {
     padding: 80px 20px;
     text-align: center;
@@ -71,11 +129,71 @@ header {
 }
 
 /* ------------------------------------------------------ */
-/* SERVICE AREAS PAGE ONLY — fully isolated styles        */
+/* GLOBAL BUTTON STYLES                                   */
 /* ------------------------------------------------------ */
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
 
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.btn-secondary {
+    background: #444;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #222;
+}
+
+/* ------------------------------------------------------ */
+/* SMOOTH SCROLL                                          */
+/* ------------------------------------------------------ */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ------------------------------------------------------ */
+/* STICKY CALL NOW BUTTON (mobile only)                   */
+/* ------------------------------------------------------ */
+@media (max-width: 768px) {
+    .call-now-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: var(--primary);
+        color: white;
+        padding: 14px 20px;
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: bold;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        z-index: 9999;
+        text-decoration: none;
+    }
+
+    .call-now-btn:hover {
+        background: var(--primary-dark);
+    }
+}
+
+/* ------------------------------------------------------ */
+/* SERVICE AREAS PAGE — fully isolated styles             */
+/* ------------------------------------------------------ */
 .service-areas-box {
-    background: #f8f9fa;
+    background: var(--light-bg);
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 4px 18px rgba(0,0,0,0.08);
@@ -107,12 +225,12 @@ header {
 
 .service-column a {
     text-decoration: none;
-    color: #0077cc;
+    color: var(--primary);
     transition: 0.2s ease;
 }
 
 .service-column a:hover {
-    color: #0056a3;
+    color: var(--primary-dark);
     text-decoration: underline;
 }
 
