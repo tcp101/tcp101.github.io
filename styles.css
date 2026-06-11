@@ -151,11 +151,30 @@ html {
 }
 
 /* ------------------------------------------------------ */
-/* MOBILE — CENTER LOGO ABOVE HERO TEXT                   */
+/* MOBILE — FORCE LOGO TO CENTER (Bootstrap override)     */
 /* ------------------------------------------------------ */
 @media (max-width: 768px) {
 
-    /* Center the logo */
+    /* Override Bootstrap column that contains the logo */
+    header .col-md-2,
+    header .col-2,
+    header [class*="col-"] {
+        order: -1 !important;              /* move logo above hero */
+        width: 100% !important;            /* full width */
+        text-align: center !important;     /* center content */
+        margin: 0 auto 20px auto !important;
+        display: block !important;
+    }
+
+    /* Center the actual image */
+    header img {
+        display: block !important;
+        margin: 0 auto !important;
+        width: 160px;
+        height: 160px;
+    }
+
+    /* If logo is text instead of image */
     .navbar .logo {
         display: block;
         width: 100%;
@@ -164,7 +183,7 @@ html {
         font-size: 1.6rem;
     }
 
-    /* Stack nav links under the centered logo */
+    /* Stack nav links under centered logo */
     .nav-links {
         flex-direction: column;
         align-items: center;
@@ -267,4 +286,3 @@ html {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
-
