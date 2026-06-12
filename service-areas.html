@@ -32,85 +32,84 @@
     </div>
 </nav>
 
+<!-- Hero Section -->
+<section class="hero small-hero">
+  <div class="hero-content">
+    <h1>Areas We Serve</h1>
+    <p>Compassionate in‑home companionship and support throughout Northern Virginia and nearby communities.</p>
+  </div>
+</section>
 
-  <!-- Hero Section -->
-  <section class="hero small-hero">
-    <div class="hero-content">
-      <h1>Areas We Serve</h1>
-      <p>Compassionate in‑home companionship and support throughout Northern Virginia and nearby communities.</p>
+<!-- MAIN CONTENT -->
+<section class="content-section">
+  <div class="container service-areas-box fade-in">
+
+    <h2 class="text-center mb-4">Our Service Locations</h2>
+    <p class="text-center">We proudly support seniors, adults, and families across Northern Virginia.</p>
+
+    <!-- Search Bar -->
+    <div class="search-wrapper">
+      <input type="text" id="citySearch" placeholder="Find your city…" onkeyup="filterCities()" />
     </div>
-  </section>
 
-  <!-- MAIN CONTENT -->
-  <section class="content-section">
-    <div class="container service-areas-box fade-in">
+    <!-- 3‑Column Responsive Layout -->
+    <div class="service-areas-grid">
 
-      <h2 class="text-center mb-4">Our Service Locations</h2>
-      <p class="text-center">We proudly support seniors, adults, and families across Northern Virginia.</p>
-
-      <!-- Search Bar -->
-      <div class="search-wrapper">
-        <input type="text" id="citySearch" placeholder="Find your city…" onkeyup="filterCities()" />
+      <div class="service-column">
+        <ul>
+          <li><span class="map-icon">🗺️</span> <a href="/Reston.html">Reston, VA</a></li>
+          <li><span class="map-icon">🗺️</span> <a href="/Herndon.html">Herndon, VA</a></li>
+          <li><span class="map-icon">🗺️</span> <a href="/Sterling.html">Sterling, VA</a></li>
+          <li><span class="map-icon">🗺️</span> <a href="/Dulles.html">Dulles, VA</a></li>
+        </ul>
       </div>
 
-      <!-- 3‑Column Responsive Layout -->
-      <div class="service-areas-grid">
-
-        <div class="service-column">
-          <ul>
-            <li><span class="map-icon">🗺️</span> <a href="/Reston.html">Reston, VA</a></li>
-            <li><span class="map-icon">🗺️</span> <a href="/Herndon.html">Herndon, VA</a></li>
-            <li><span class="map-icon">🗺️</span> <a href="/Sterling.html">Sterling, VA</a></li>
-            <li><span class="map-icon">🗺️</span> <a href="/Dulles.html">Dulles, VA</a></li>
-          </ul>
-        </div>
-
-        <div class="service-column">
-          <ul>
-            <li><span class="map-icon">🗺️</span> <a href="/Ashburn.html">Ashburn, VA</a></li>
-            <li><span class="map-icon">🗺️</span> <a href="/Leesburg.html">Leesburg, VA</a></li>
-            <li><span class="map-icon">🗺️</span> <a href="/Great-Falls.html">Great Falls, VA</a></li>
-            <li><span class="map-icon">🗺️</span> <a href="/Falls-Church.html">Falls Church, VA</a></li>
-          </ul>
-        </div>
-
-        <div class="service-column">
-          <ul>
-            <li><span class="map-icon">🗺️</span> <a href="/Fairfax.html">Fairfax, VA</a></li>
-            <li><span class="map-icon">🗺️</span> <a href="/Vienna.html">Vienna, VA</a></li>
-            <li><span class="map-icon">🗺️</span> <a href="/Herndon.html">Herndon, VA</a></li>
-            <li><span class="map-icon">🗺️</span> <a href="/Sterling.html">Sterling, VA</a></li>
-          </ul>
-        </div>
-
+      <div class="service-column">
+        <ul>
+          <li><span class="map-icon">🗺️</span> <a href="/Ashburn.html">Ashburn, VA</a></li>
+          <li><span class="map-icon">🗺️</span> <a href="/Leesburg.html">Leesburg, VA</a></li>
+          <li><span class="map-icon">🗺️</span> <a href="/Great-Falls.html">Great Falls, VA</a></li>
+          <li><span class="map-icon">🗺️</span> <a href="/Falls-Church.html">Falls Church, VA</a></li>
+        </ul>
       </div>
 
-      <p class="text-center mt-4 fw-bold">Don’t see your area listed? We may still be able to help — just call us!</p>
-
-      <div class="text-center mt-3">
-        <a href="tel:5715440700" class="btn btn-primary btn-lg">Call (571) 544‑0700</a>
+      <div class="service-column">
+        <ul>
+          <li><span class="map-icon">🗺️</span> <a href="/Fairfax.html">Fairfax, VA</a></li>
+          <li><span class="map-icon">🗺️</span> <a href="/Vienna.html">Vienna, VA</a></li>
+          <li><span class="map-icon">🗺️</span> <a href="/Herndon.html">Herndon, VA</a></li>
+          <li><span class="map-icon">🗺️</span> <a href="/Sterling.html">Sterling, VA</a></li>
+        </ul>
       </div>
 
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 In‑Home Companions. All rights reserved.</p>
-  </footer>
+    <p class="text-center mt-4 fw-bold">Don’t see your area listed? We may still be able to help — just call us!</p>
 
-  <!-- Search Script -->
-  <script>
-    function filterCities() {
-      const input = document.getElementById("citySearch").value.toLowerCase();
-      const items = document.querySelectorAll(".service-column li");
+    <div class="text-center mt-3">
+      <a href="tel:5715440700" class="btn btn-primary btn-lg">Call (571) 544‑0700</a>
+    </div>
 
-      items.forEach(item => {
-        const text = item.textContent.toLowerCase();
-        item.style.display = text.includes(input) ? "" : "none";
-      });
-    }
-  </script>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2026 In‑Home Companions. All rights reserved.</p>
+</footer>
+
+<!-- Search Script -->
+<script>
+  function filterCities() {
+    const input = document.getElementById("citySearch").value.toLowerCase();
+    const items = document.querySelectorAll(".service-column li");
+
+    items.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      item.style.display = text.includes(input) ? "" : "none";
+    });
+  }
+</script>
 
 </body>
 </html>
