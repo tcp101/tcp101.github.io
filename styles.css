@@ -102,7 +102,7 @@ header {
 
 /* Smaller hero for Service Areas page */
 .small-hero {
-    padding: 30px 20px !important;   /* reduce height */
+    padding: 20px 20px !important;   /* reduce height */
 }
 
 .small-hero .hero-content h1 {
