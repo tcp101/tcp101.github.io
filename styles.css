@@ -100,8 +100,19 @@ header {
     color: #333;
 }
 
+/* Smaller hero for Service Areas page */
 .small-hero {
-    padding: 60px 20px;
+    padding: 30px 20px !important;   /* reduce height */
+}
+
+.small-hero .hero-content h1 {
+    font-size: 1.8rem !important;    /* slightly smaller title */
+    margin-bottom: 8px;
+}
+
+.small-hero .hero-content p {
+    font-size: 1rem !important;      /* smaller subtitle */
+    margin: 0;
 }
 
 .hero-content h1 {
