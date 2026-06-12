@@ -1,122 +1,311 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Service Areas | In‑Home Companions</title>
+/* ------------------------------------------------------ */
+/* ORIGINAL WORKING STYLES (kept exactly as-is)           */
+/* ------------------------------------------------------ */
 
-  <!-- Bootstrap CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-    crossorigin="anonymous"
-  />
+.hero {
+    background-color: #D8C3A5 !important;
+}
 
-  <!-- Your Styles -->
-  <link rel="stylesheet" href="styles.css" />
-</head>
+.hero.bg-primary {
+    background: #D8C3A5 !important;
+}
 
-<body>
+body {
+    font-family: Arial, sans-serif;
+}
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
+.navbar-brand {
+    font-weight: bold;
+}
 
-    <a class="navbar-brand" href="index.html">In‑Home Companions</a>
+footer {
+    margin-top: auto;
+}
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+#card-element {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link active" href="service-areas.html">Service Areas</a></li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://book.squareup.com/appointments/pub6tf7rkqweki/location/LWTMQJM30D3BR">Book Now</a>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
-    </div>
+/* ------------------------------------------------------ */
+/* GLOBAL COLOR PALETTE                                   */
+/* ------------------------------------------------------ */
+:root {
+    --primary: #0077cc;
+    --primary-dark: #0056a3;
+    --accent: #D8C3A5;
+    --light-bg: #f8f9fa;
+    --text-dark: #333;
+}
 
-  </div>
-</nav>
+/* ------------------------------------------------------ */
+/* GLOBAL LAYOUT + CONTAINER                              */
+/* ------------------------------------------------------ */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-<!-- HERO -->
-<section class="hero small-hero">
-  <div class="hero-content">
-    <h1>Areas We Serve</h1>
-    <p>Compassionate in‑home companionship and support throughout Northern Virginia and nearby communities.</p>
-  </div>
-</section>
+/* ------------------------------------------------------ */
+/* HEADER + NAVIGATION                                    */
+/* ------------------------------------------------------ */
+header {
+    background: white;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
 
-<!-- MAIN CONTENT -->
-<section class="content-section">
-  <div class="container service-areas-box fade-in">
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
 
-    <h2 class="text-center mb-4">Our Service Locations</h2>
-    <p class="text-center">We proudly support seniors, adults, and families across Northern Virginia.</p>
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--text-dark);
+}
 
-    <!-- Search Bar -->
-    <div class="search-wrapper">
-      <input type="text" id="citySearch" placeholder="Find your city…" onkeyup="filterCities()" />
-    </div>
+/* Desktop nav */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
 
-    <!-- 3‑Column Layout -->
-    <div class="service-areas-grid">
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+}
 
-      <div class="service-column">
-        <ul>
-          <li><span class="map-icon">🗺️</span> <a href="/Reston.html">Reston, VA</a></li>
-          <li><span class="map-icon">🗺️</span> <a href="/Herndon.html">Herndon, VA</a></li>
-          <li><span class="map-icon">🗺️</span> <a href="/Sterling.html">Sterling, VA</a></li>
-          <li><span class="map-icon">🗺️</span> <a href="/Dulles.html">Dulles, VA</a></li>
-        </ul>
-      </div>
+.nav-links li a.active {
+    color: var(--primary);
+    font-weight: 600;
+}
 
-      <div class="service-column">
-        <ul>
-          <li><span class="map-icon">🗺️</span> <a href="/Ashburn.html">Ashburn, VA</a></li>
-          <li><span class="map-icon">🗺️</span> <a href="/Leesburg.html">Leesburg, VA</a></li>
-          <li><span class="map-icon">🗺️</span> <a href="/Great-Falls.html">Great Falls, VA</a></li>
-          <li><span class="map-icon">🗺️</span> <a href="/Falls-Church.html">Falls Church, VA</a></li>
-        </ul>
-      </div>
+/* ------------------------------------------------------ */
+/* HERO SECTION                                           */
+/* ------------------------------------------------------ */
+.hero {
+    padding: 80px 20px;
+    text-align: center;
+    color: #333;
+}
 
-      <div class="service-column">
-        <ul>
-          <li><span class="map-icon">🗺️</span> <a href="/Fairfax.html">Fairfax, VA</a></li>
-          <li><span class="map-icon">🗺️</span> <a href="/Vienna.html">Vienna, VA</a></li>
-          <li><span class="map-icon">🗺️</span> <a href="/Herndon.html">Herndon, VA</a></li>
-          <li><span class="map-icon">🗺️</span> <a href="/Sterling.html">Sterling, VA</a></li>
-        </ul>
-      </div>
+/* Smaller hero for Service Areas page */
+.small-hero {
+    padding: 20px 20px !important;   /* reduce height */
+}
 
-    </div>
+.small-hero .hero-content h1 {
+    font-size: 1.8rem !important;    /* slightly smaller title */
+    margin-bottom: 8px;
+}
 
-    <p class="text-center mt-4 fw-bold">Don’t see your area listed? We may still be able to help — just call us!</p>
+.small-hero .hero-content p {
+    font-size: 1rem !important;      /* smaller subtitle */
+    margin: 0;
+}
 
-    <div class="text-center mt-3">
-      <a href="tel:5715440700" class="btn btn-primary btn-lg">Call (571) 544‑0700</a>
-    </div>
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
 
-  </div>
-</section>
+.hero-content p {
+    font-size: 1.2rem;
+}
 
-<!-- FOOTER -->
-<footer>
-  <p>&copy; 2026 In‑Home Companions. All rights reserved.</p>
-</footer>
+/* ------------------------------------------------------ */
+/* GLOBAL BUTTON STYLES                                   */
+/* ------------------------------------------------------ */
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
 
-<!-- Search Script -->
-<script>
-  function filterCities() {
-    const input = document.getElementById("citySearch").value.toLowerCase();
-    const items = document.querySelectorAll(".service-column li");
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
 
-    items.forEach(item => {
-      const text = item.textContent.toLowerCase();
-      item.style.display = text.includes
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.btn-secondary {
+    background: #444;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #222;
+}
+
+/* ------------------------------------------------------ */
+/* SMOOTH SCROLL                                          */
+/* ------------------------------------------------------ */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ------------------------------------------------------ */
+/* MOBILE HEADER FIX — CENTER LOGO + STACK NAV LINKS      */
+/* ------------------------------------------------------ */
+@media (max-width: 768px) {
+
+    /* Force Bootstrap column containing logo to behave */
+    header .col-md-2,
+    header .col-2,
+    header [class*="col-"] {
+        order: -1 !important;
+        width: 100% !important;
+        text-align: center !important;
+        margin: 0 auto 20px auto !important;
+        display: block !important;
+    }
+
+    /* Center the actual logo image */
+    header img {
+        display: block !important;
+        margin: 0 auto !important;
+        width: 160px;
+        height: 160px;
+    }
+
+    /* If logo is text instead of image */
+    .navbar .logo {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 1.6rem;
+    }
+
+    /* Stack nav links vertically under the logo */
+    .nav-links {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 14px !important;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
+/* ------------------------------------------------------ */
+/* STICKY CALL NOW BUTTON (mobile only)                   */
+/* ------------------------------------------------------ */
+@media (max-width: 768px) {
+    .call-now-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: var(--primary);
+        color: white;
+        padding: 14px 20px;
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: bold;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        z-index: 9999;
+        text-decoration: none;
+    }
+
+    .call-now-btn:hover {
+        background: var(--primary-dark);
+    }
+}
+
+/* ------------------------------------------------------ */
+/* SERVICE AREAS PAGE                                     */
+/* ------------------------------------------------------ */
+.service-areas-box {
+    background: var(--light-bg);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+.service-areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.service-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-column li {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.map-icon {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.service-column a {
+    text-decoration: none;
+    color: var(--primary);
+    transition: 0.2s ease;
+}
+
+.service-column a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* Search bar */
+.search-wrapper {
+    text-align: center;
+    margin: 20px 0 30px;
+}
+
+#citySearch {
+    width: 60%;
+    max-width: 400px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
