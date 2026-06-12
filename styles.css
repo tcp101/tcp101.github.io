@@ -309,3 +309,23 @@ html {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+/* Center homepage logo on mobile */
+@media (max-width: 768px) {
+  header .col-md-2,
+  header .col-2,
+  header [class*="col-"] {
+    width: 100% !important;
+    text-align: center !important;
+    margin: 0 auto 20px auto !important;
+    display: block !important;
+  }
+
+  header img {
+    display: block;
+    margin: 0 auto !important;
+    width: 160px;
+    height: 160px;
+  }
+}
+
+
